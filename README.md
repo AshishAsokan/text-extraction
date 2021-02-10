@@ -45,14 +45,14 @@ pip install -e text-extraction/
 ```
 
 # Usage
-- Run the main file using the following command, where `<option>` is `1` for the Watershed Segmentation approach and `2` for the EAST approach, and `<video_path>` is the path to the video files under `src/Videos`.
+- Run the main file using the following command, where `OPTION` is `1` for the Watershed Segmentation approach and `2` for the EAST approach, and `VIDEO_PATH` is the path to the video files under `src/Videos`.
 ```bash
-python3 src/main.py <option> <video_path>
+python3 src/main.py OPTION VIDEO_PATH > output.txt
 ```
 
-- The individual files can be run using the below command, where `<file>` can be `detect_east` or `detect_watershed`.:
+- The individual files can be run using the below command, where `FILE` can be `detect_east` or `detect_watershed`. The paths to the desired images should be mentioned in the code.
 ```bash
-python3 src/<file>.py
+python3 src/FILE.py
 ```
 
  ## References
