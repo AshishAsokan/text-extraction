@@ -1,5 +1,5 @@
 # Text Extraction from Videos and Images using OpenCV
-This task is an implementation of a text extractor in OpenCV that uses the Watershed Segmentation technique and the EAST Text Detection Model available in OpenCV to extract textual content from video frames.
+This task is an implementation of a simple OCR in OpenCV that uses the Watershed Segmentation technique and the EAST Text Detection Model to extract text from video frames.
 
 ## Watershed Segmentation Approach
 The watershed segmentation algorithm available in OpenCV is used to segment the input frame into lines of text. Bounding boxes are constructed around the text which is extracted from the frames using pytesseract.The Watershed approach is more reliable with binarised images and often fails with inputs having a wide spectrum of colours.The steps involved in this approach are:
