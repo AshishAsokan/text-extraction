@@ -1,6 +1,7 @@
 import pytesseract as pyt
 from imutils.object_detection import non_max_suppression
 import numpy as np
+import sys
 import cv2
 
 class TextDetectEast:
@@ -134,10 +135,10 @@ if __name__ == '__main__':
 
     # Creating model and reading image
     east_obj = TextDetectEast(320, 320, 0.5)
-    input_image = cv2.imread('sample.png')
+    input_image = cv2.imread(sys.argv[1])
 
     # Using EAST to detect text
-    image, text = east_obj.text_detect()
+    image, text = east_obj.text_detect(input_image)
     print('Text:', text)
     
     cv2.imshow('Frame', image)

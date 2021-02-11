@@ -3,6 +3,7 @@ import cv2
 from skimage.feature import peak_local_max
 from skimage.morphology import watershed
 import pytesseract as pyt
+import sys
 from scipy import ndimage
 import numpy as np
 
@@ -96,7 +97,7 @@ class LineSegment:
 if __name__ == '__main__':
 
     sample = LineSegment()
-    input_image = cv2.imread('images.png')
+    input_image = cv2.imread(sys.argv[1])
     image, text = sample.text_detect(input_image)
     print(text)
 

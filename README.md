@@ -41,18 +41,23 @@ This approach makes use of the pre-trained EAST deep learning network that is av
 - Clone the repository
 - Install the package locally using the following command
 ```bash
-pip install -e text-extraction/
+pip3 install -e text-extraction/
 ```
 
 # Usage
-- Run the main file using the following command, where `OPTION` is `1` for the Watershed Segmentation approach and `2` for the EAST approach, and `VIDEO_PATH` is the path to the video files under `src/Videos`.
+Folders in the Repository:
+- ```src/Inputs``` : Sample input images to test the 2 approaches invidivually
+- ```src/Videos``` : Sample videos to test the 2 approaches
+
+Instructions to Run the Files:
+- Run the main file using the following command, where `OPTION` is `1` for the Watershed Segmentation approach and `2` for the EAST approach, and `VIDEO_FILE` is one of the video files under `src/Videos`.
 ```bash
-python3 src/main.py OPTION VIDEO_PATH > output.txt
+python3 src/main.py OPTION src/Videos/VIDEO_FILE > output.txt
 ```
 
-- The individual files can be run using the below command, where `FILE` can be `detect_east` or `detect_watershed`. The paths to the desired images should be mentioned in the code.
+- The individual files can be run using the below command, where `FILE` can be `detect_east` or `detect_watershed`, and ```IMAGE``` is one of the sample images in `src/Inputs/`.
 ```bash
-python3 src/FILE.py
+python3 src/FILE.py src/Inputs/IMAGE > output.txt
 ```
 
  ## References
