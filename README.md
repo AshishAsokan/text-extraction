@@ -12,7 +12,7 @@ The watershed segmentation algorithm available in OpenCV is used to segment the 
 ## EAST Text Detection
 This approach makes use of the pre-trained EAST deep learning network that is available in OpenCV. The steps involved in this approach are:
 - Resizing the image to dimensions which are multiples of 32
-- Computing the ration for this dimension change
+- Computing the ratio for this dimension change
 - Creating a blob from the image which performs mean subtraction and channel swapping
 - Forward pass of the EAST model to obtain predictions
 - Parsing outputs to generating bounding box coordinates
